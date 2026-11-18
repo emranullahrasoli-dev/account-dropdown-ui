@@ -1,0 +1,107 @@
+.dashboard {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: var(--dashboard-bg);
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.dashboard-top {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: min(1180px, 100%);
+  min-height: 46px;
+  margin: 0 auto;
+  padding: clamp(14px, 2.2vw, 18px) clamp(18px, 3.2vw, 32px);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.1vw, 12px);
+}
+
+.profile-slot {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.invite-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  transition:
+    background 0.16s ease,
+    transform 0.16s ease;
+}
+
+.invite-btn:hover {
+  background: var(--hover);
+  transform: translateY(-1px);
+}
+
+.invite-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.icon-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--icon);
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  transition:
+    background 0.16s ease,
+    transform 0.16s ease;
+}
+
+.icon-btn:hover {
+  background: var(--hover);
+  transform: translateY(-1px);
+}
+
+.icon-btn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff6f6f;
+  box-shadow: 0 0 0 2px var(--surface);
+}

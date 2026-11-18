@@ -1,0 +1,57 @@
+@media (max-width: 760px) {
+  .icon-btn,
+  .profile-trigger {
+    width: 42px;
+    height: 42px;
+  }
+
+  .invite-btn {
+    min-height: 42px;
+    padding: 0 16px;
+  }
+
+  .profile-menu {
+    top: calc(100% + 10px);
+  }
+}
+
+@media (max-width: 460px) {
+  .dashboard-top {
+    padding: 12px 16px;
+  }
+
+  .top-actions {
+    gap: 7px;
+  }
+
+  .invite-btn {
+    font-size: 12px;
+    padding: 0 13px;
+  }
+
+  .profile-menu {
+    right: 0;
+    width: min(360px, calc(100vw - 32px));
+    max-height: calc(100vh - 100px);
+  }
+}
+
+@media (max-width: 380px) {
+  .invite-btn {
+    width: 42px;
+    padding: 0;
+  }
+
+  .invite-btn span {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

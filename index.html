@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Dropdown — Dashboard Profile Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="dashboard">
+        <div class="dashboard-top">
+          <div class="top-actions">
+            <button class="invite-btn" type="button" aria-label="Invite member">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span>Invite Member</span>
+            </button>
+
+            <button class="icon-btn" type="button" aria-label="Workspace settings">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .66.39 1.26 1 1.51H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"
+                />
+              </svg>
+            </button>
+
+            <button class="icon-btn" type="button" aria-label="Notifications">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+                <path d="M10 21h4" />
+              </svg>
+              <span class="notification-dot"></span>
+            </button>
+
+            <div class="profile-slot">
+              <button
+                class="profile-trigger"
+                id="profileTrigger"
+                type="button"
+                aria-label="Open account menu"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="profileMenu"
+              >
+                <span class="avatar-fallback" data-profile-initials aria-hidden="true"></span>
+                <img data-profile-avatar alt="" />
+              </button>
+
+              <div class="profile-menu" id="profileMenu" aria-label="Account menu">
+                <div class="profile-summary">
+                  <div class="avatar-large">
+                    <span class="avatar-fallback" data-profile-initials aria-hidden="true"></span>
+                    <img data-profile-avatar alt="" />
+                  </div>
+
+                  <div class="account-info">
+                    <div class="account-name" data-profile-name></div>
+                    <div class="account-email" data-profile-email></div>
+                  </div>
+                </div>
+
+                <button class="upgrade-card" type="button">
+                  <span class="crown-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m3 7 4.5 4L12 5l4.5 6L21 7l-2 10H5L3 7Z" />
+                      <path d="M5 20h14" />
+                    </svg>
+                  </span>
+                  <span class="upgrade-title">Upgrade profile</span>
+                  <span class="pro-pill">PRO</span>
+                </button>
+
+                <nav class="menu-list" aria-label="Account options">
+                  <button class="menu-item" data-menu type="button">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8.2" r="3.4" />
+                        <path d="M5.5 20c.7-4.1 3-6.2 6.5-6.2s5.8 2.1 6.5 6.2" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">User Profile</span>
+                  </button>
+
+                  <button class="menu-item" data-menu type="button">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="4" width="6.5" height="6.5" rx="1.8" />
+                        <rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" />
+                        <rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" />
+                        <rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">Integrations</span>
+                  </button>
+
+                  <button class="menu-item active" data-menu type="button" aria-current="page">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .66.39 1.26 1 1.51H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">Settings</span>
+                  </button>
+
+                  <button class="menu-item" data-menu type="button">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                        <circle cx="10" cy="7" r="4" />
+                        <path d="M21 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">Community</span>
+                  </button>
+
+                  <button class="menu-item" data-menu type="button">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M9.6 9.3a2.4 2.4 0 1 1 3.8 1.92c-.66.5-1.4 1.05-1.4 2.08" />
+                        <path d="M12 17h.01" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">Help Center</span>
+                  </button>
+
+                  <button class="menu-item dark-mode-item" id="darkModeBtn" type="button" role="switch" aria-checked="false">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.42-1.42" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">Dark Mode</span>
+                    <span class="switch" aria-hidden="true"></span>
+                  </button>
+
+                  <button class="menu-item danger" data-menu type="button">
+                    <span class="menu-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                        <path d="m10 17 5-5-5-5" />
+                        <path d="M15 12H3" />
+                      </svg>
+                    </span>
+                    <span class="menu-label">User Profile</span>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/profile-dropdown.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
